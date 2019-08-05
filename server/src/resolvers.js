@@ -11,7 +11,7 @@ const contacts = [
     lastName: "SlutBucket"
   },
 ];
-
+// these are like controllers
 export const resolvers = {
   Query: {
     contacts: () => contacts
@@ -29,3 +29,4 @@ export const resolvers = {
     }
   }
 }
+

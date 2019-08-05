@@ -1,22 +1,20 @@
 import React from 'react';
 import { Query } from "react-apollo";
-// import { gql } from "apollo-boost";
 import gql from 'graphql-tag';
 
-const GET_CONTACTS = gql`
+export const GET_CONTACTS = gql`
 {
    contacts {
-    id
-    firstName
-    lastName
+    id 
+    firstName 
+    lastName 
   }
 }
 `;
 const Contacts = () => (
   <Query query={GET_CONTACTS}>
     {({ data, loading, error }) => {
-      console.log(data)
-      if (loading) return "Loading...";
+      if (loading) return <p>Loading...</p>;
       if (error) return <p>ERROR</p>;
       return (
         <React.Fragment>

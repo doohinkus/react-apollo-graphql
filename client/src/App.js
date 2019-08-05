@@ -6,6 +6,7 @@ import { HttpLink } from 'apollo-link-http';
 
 import Contacts from './Contacts';
 import './App.css';
+import AddContact from './AddContact';
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
@@ -17,11 +18,13 @@ const client = new ApolloClient({
   link
 });
 
+
 function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
         <h1>Apollo Graph QL Project</h1>
+        <AddContact />
         <Contacts />
       </div>
     </ApolloProvider>
